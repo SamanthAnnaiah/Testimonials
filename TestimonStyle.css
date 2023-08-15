@@ -1,0 +1,159 @@
+body {
+    width: 1440px;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.card_main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 12px;
+    margin: auto;
+    margin-top: 40px;
+    width: 90%;
+}
+
+.outer {
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 2px rgb(103, 96, 96);
+}
+
+.card1 {
+    grid-column: 1/3;
+}
+
+.card4 {
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+
+.card5 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.card3 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.outer:hover {
+    transform: translatey(-3px);
+}
+
+.header {
+    display: grid;
+    grid-template-areas: 
+    'imgg name1'
+    'imgg name2';
+    padding: 0;
+    width: 180px;
+    height: 60px;
+}
+
+
+.header p {
+    color: aliceblue;
+    font-family: 'Audiowide';
+    font-size: 10px;
+    padding-left: 7px;
+    margin: 0;
+}
+
+.imgg {
+    grid-area: imgg;
+    padding: 7px;
+    height: 60px;
+    width: 60px;
+    margin: 3px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 3px 3px rgb(149, 189, 207) inset;
+}
+
+.name1 {
+    grid-area: name1;
+    padding-top: 8px;
+}
+
+.name2 {
+    grid-area: name2;
+}
+
+.summary {
+    font-size: 18px;
+    font-family: 'Lancelot';
+    font-weight: 500;
+    color: white;
+    padding: 15px;
+}
+
+.detail {
+    font-size: 16px;
+    font-family: 'Lancelot';
+    font-weight: 500;
+    color: white;
+    padding: 5px;
+}
+
+.card1 {
+    background-color: hsl(263, 55%, 52%);
+    opacity: 1.2;
+}
+
+.card2 {
+    background-color: hsl(217, 19%, 35%);
+    opacity: 1.6;
+}
+
+.card3 {
+    background-color: hsl(219, 29%, 14%);
+    opacity: 1.6;
+}
+
+.card4 {
+    background-color: hsla(0, 3%, 27%, 0.867);
+    opacity: 1.0;
+}
+
+.card5 {
+    background-color: hsla(0, 54%, 21%, 0.762);
+    opacity: 1.6;
+}
+
+@media screen and (max-width:800px) {
+    .card_main {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5,1fr);   
+    } 
+
+    .outer {
+        max-width: 500px;
+    }
+    
+    .card1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .card2 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .card3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .card4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .card5 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+}
+
